@@ -1,0 +1,7 @@
+{
+  "name": "Óptica S&V - Salud y Estilo",
+  "description": "Una landing page de alto impacto para Óptica S&V en Suba, Bogotá, que combina precisión clínica con asesoría de imagen personalizada, integrando un Estilista IA.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
