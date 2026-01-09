@@ -1,8 +1,8 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-// Fix: Initialize GoogleGenAI using process.env.API_KEY directly as per SDK requirements
-const getAI = () => new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize GoogleGenAI using Vite's environment variable
+const getAI = () => new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 const SYSTEM_INSTRUCTION = `
 Eres el "Asesor de Estilo S&V", un experto en salud visual y diseño de imagen personal para Óptica S&V en Suba, Bogotá. 
@@ -35,7 +35,7 @@ export const chatWithAI = async (message: string, history: { role: 'user' | 'mod
 export const generateStyleImage = async (prompt: string) => {
   const ai = getAI();
   const fullPrompt = `Un retrato cinematográfico y elegante de una persona con estilo moderno usando monturas de gafas que coincidan con esta descripción: ${prompt}. El fondo debe ser minimalista y profesional. Calidad fotográfica, estilo editorial de moda.`;
-  
+
   const response = await ai.models.generateContent({
     model: 'gemini-2.5-flash-image',
     contents: [{ parts: [{ text: fullPrompt }] }],

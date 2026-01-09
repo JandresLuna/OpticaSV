@@ -47,7 +47,7 @@ git push -u origin main
 
 1. En la página de configuración del proyecto, ve a la sección "Environment Variables"
 2. Agrega la siguiente variable:
-   - **Name:** `GEMINI_API_KEY`
+   - **Name:** `VITE_GEMINI_API_KEY`
    - **Value:** Tu API key de Gemini
    - **Environment:** Production, Preview, Development (selecciona todos)
 
@@ -86,7 +86,7 @@ vercel logs
 vercel ls
 
 # Configurar variables de entorno desde CLI
-vercel env add GEMINI_API_KEY
+vercel env add VITE_GEMINI_API_KEY
 ```
 
 ## 🐛 Troubleshooting
@@ -97,7 +97,7 @@ vercel env add GEMINI_API_KEY
 - Asegúrate de que todas las dependencias estén en `package.json`
 
 ### Error: "API Key not found"
-- Verifica que `GEMINI_API_KEY` esté configurada en Environment Variables
+- Verifica que `VITE_GEMINI_API_KEY` esté configurada en Environment Variables
 - Asegúrate de haber seleccionado todos los ambientes (Production, Preview, Development)
 - Redeploy después de agregar la variable
 

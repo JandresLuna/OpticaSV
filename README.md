@@ -28,7 +28,7 @@ Aplicación web moderna de óptica con asistente AI integrado usando Gemini.
 
 3. **Configura las variables de entorno**
    - En la configuración del proyecto en Vercel, ve a "Environment Variables"
-   - Agrega: `GEMINI_API_KEY` con tu API key de Gemini
+   - Agrega: `VITE_GEMINI_API_KEY` con tu API key de Gemini
    - Obtén tu API key en: https://aistudio.google.com/app/apikey
 
 4. **Deploy**
@@ -65,7 +65,7 @@ vercel --prod
 
 3. **Configura variables de entorno**
    - Copia `.env.example` a `.env.local`
-   - Agrega tu `GEMINI_API_KEY` en `.env.local`
+   - Agrega tu `VITE_GEMINI_API_KEY` en `.env.local`
 
 4. **Ejecuta el servidor de desarrollo**
    ```bash
